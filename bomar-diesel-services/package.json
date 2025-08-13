@@ -1,6 +1,6 @@
 {
   "name": "bomar-diesel-services",
-  "version": "1.0.0",
+  "version": "3.3.813",
   "description": "A full-service marine diesel repair shop landing page built with Vue and Vuetify.",
   "type": "module",
   "main": "src/main.ts",
@@ -11,7 +11,8 @@
     "lint": "eslint . || true",
     "test": "vitest",
     "test:run": "vitest run",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "v": "node ../version.mjs"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",

@@ -47,6 +47,10 @@ jobs:
         env:
           CI: true
 
+      - name: Version
+        working-directory: bomar-diesel-services
+        run: yarn v
+
       - name: Build
         working-directory: bomar-diesel-services
         run: yarn build

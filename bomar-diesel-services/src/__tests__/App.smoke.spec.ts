@@ -1,8 +1,10 @@
+/// <reference types="vitest" />
 import { mount } from '@vue/test-utils'
 import { createRouter, createMemoryHistory } from 'vue-router'
 import vuetify from '@/plugins/vuetify'
 import App from '@/App.vue'
 import LandingPage from '@/views/LandingPage.vue'
+import { describe, expect, it } from 'vitest'
 
 describe('App smoke test', () => {
   it('mounts with router and vuetify', async () => {
