@@ -15,7 +15,17 @@
       <router-view />
     </v-main>
 
-    <FooterBar />
+    <v-footer class="px-6 py-4">
+      <div class="d-flex flex-column flex-sm-row w-100 justify-space-between align-center">
+        <div class="text-medium-emphasis">
+          © {{ new Date().getFullYear() }} Bomar Diesel Services, L.L.C.
+        </div>
+        <div class="d-flex ga-4">
+          <span>Phone: {{ site.phone }}</span>
+          <span>Email: {{ site.email }}</span>
+        </div>
+      </div>
+    </v-footer>
   </v-app>
 </template>
 

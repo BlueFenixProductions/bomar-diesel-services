@@ -1,31 +1,24 @@
 import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
-import '@mdi/font/css/materialdesignicons.css'
+import { createVuetify, ThemeDefinition } from 'vuetify'
 
-const bomarTheme = {
+const bomarTheme: ThemeDefinition = {
   dark: false,
   colors: {
-    primary: '#1E3A5F',    // navy
-    secondary: '#2C6AA0',  // steel blue
-    accent: '#C8102E',     // engine red
-    surface: '#F2F5F8',
-    background: '#FFFFFF',
-    info: '#2C6AA0',
+    primary: '#0A3D6B',      // deep marine blue (from logo badge)
+    secondary: '#C4211E',    // engine red
+    accent: '#2E80C4',       // lighter blue
+    surface: '#F4F6F8',      // light gray
+    background: '#E9EEF3',   // pale blue/gray
+    info: '#2E80C4',
     success: '#2E7D32',
     warning: '#ED6C02',
-    error: '#D32F2F'
-  }
+    error: '#D32F2F',
+  },
 }
 
 export default createVuetify({
   theme: {
     defaultTheme: 'bomarTheme',
-    themes: { bomarTheme }
+    themes: { bomarTheme },
   },
-  icons: {
-    defaultSet: 'mdi',
-    aliases,
-    sets: { mdi }
-  }
 })
