@@ -1,0 +1,57 @@
+@use 'vuetify/settings' with (
+  $color-pack: true
+);
+
+:root {
+  --hero-overlay: rgba(30, 58, 95, 0.6);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background-color: #003366; // Example color from logo
+    color: #ffffff; // Example text color
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.contact-bar {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #003366; // Example color from logo
+    color: #ffffff; // Example text color
+    padding: 20px 0;
+    text-align: center;
+}

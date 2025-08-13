@@ -1,0 +1,25 @@
+$primary-color: #007BFF; // Replace with the primary color from the logo
+$secondary-color: #6C757D; // Replace with the secondary color from the logo
+$background-color: #F8F9FA; // Replace with the background color from the logo
+$text-color: #212529; // Replace with the text color from the logo
+
+// Font settings
+$font-family: 'Roboto', sans-serif;
+
+// Breakpoints for responsive design
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Mixin for flexbox centering
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin for box shadow
+@mixin box-shadow($shadow: 0 4px 8px rgba(0, 0, 0, 0.1)) {
+  box-shadow: $shadow;
+}
