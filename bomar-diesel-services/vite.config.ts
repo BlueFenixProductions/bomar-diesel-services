@@ -6,7 +6,7 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   appType: 'spa', // ensure SPA fallback
   plugins: [vue(), vuetify({ autoImport: true })],
-  server: { port: 6661, open: true },
+  server: { port: 6661, open: true, host: true },
   build: { outDir: 'dist' },
   resolve: {
     alias: {
