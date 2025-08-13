@@ -27,19 +27,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: yarn
+          cache-dependency-path: bomar-diesel-services/yarn.lock
 
-      - name: Install deps
+      - name: Enable Corepack (Yarn)
+        run: corepack enable
+
+      - name: Install deps (yarn)
         working-directory: bomar-diesel-services
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Lint (acts as tests)
         working-directory: bomar-diesel-services
-        run: npm run lint
+        run: yarn lint
 
       - name: Build
         working-directory: bomar-diesel-services
-        run: npm run build
+        run: yarn build
 
       - name: Prepare Pages artifacts (CNAME, SPA fallback, nojekyll)
         run: |
