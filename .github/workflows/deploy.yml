@@ -37,9 +37,15 @@ jobs:
         working-directory: bomar-diesel-services
         run: yarn install --frozen-lockfile
 
-      - name: Lint (acts as tests)
+      - name: Lint
         working-directory: bomar-diesel-services
         run: yarn lint
+
+      - name: Test (Vitest)
+        working-directory: bomar-diesel-services
+        run: yarn test:run --coverage
+        env:
+          CI: true
 
       - name: Build
         working-directory: bomar-diesel-services
@@ -47,7 +53,6 @@ jobs:
 
       - name: Prepare Pages artifacts (CNAME, SPA fallback, nojekyll)
         run: |
-          mkdir -p bomar-diesel-services/dist
           echo "bomar.bluefenix.net" > bomar-diesel-services/dist/CNAME
           touch bomar-diesel-services/dist/.nojekyll
           cp bomar-diesel-services/dist/index.html bomar-diesel-services/dist/404.html
